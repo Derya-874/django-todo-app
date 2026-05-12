@@ -1,4 +1,4 @@
-namename: Build and share Docker Image to Docker Hub
+name: Build and share Docker Image to Docker Hub
 
 on:
   push:
@@ -27,7 +27,3 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPO_NAME }}:latest
-           with:
-                 context: .
-                 push: true
-                 tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPO_NAME }}:latest
